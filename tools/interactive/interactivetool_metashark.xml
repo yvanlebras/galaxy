@@ -28,7 +28,7 @@
     <help>
 <![CDATA[
 
-`MetaShARK <https://github.com/earnaud/MetaShARK-v2>`_ is a R Shiny App to automate metadata creation in Ecological Metadata Language (E>
+`MetaShARK <https://github.com/earnaud/MetaShARK-v2>`_ is a R Shiny App to automate metadata creation using Ecological Metadata Language standard
 
 Example input file (csv ot tabular)::
 
