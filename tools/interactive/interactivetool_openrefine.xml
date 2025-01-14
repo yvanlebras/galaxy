@@ -1,10 +1,10 @@
 <tool id="interactive_tool_openrefine" tool_type="interactive" name="OpenRefine" version="0.3">
     <description>Working with messy data</description>
     <requirements>
-        <container type="docker">ylebras/openrefine-docker:2024</container>
+        <container type="docker">biodec/openrefine-docker</container>
     </requirements>
     <entry_points>
-        <entry_point name="Openrefine" requires_domain="False" requires_path_in_url="False">
+        <entry_point name="Openrefine visualisation" requires_domain="False" requires_path_in_url="False">
             <port>3333</port>
         </entry_point>
     </entry_points>
@@ -17,7 +17,7 @@
     </environment_variables>
     <configfiles>
         <configfile name="start_openrefine"><![CDATA[
-exec /openrefine/refine -i 0.0.0.0 -m \${GALAXY_MEMORY_MB}m &
+exec /openrefine/refine -i 0.0.0.0 -m \$GALAXY_MEMORY_MB &
 
 ##Check if openrefine is up to work
 STATUS=\$(curl --include 'http://127.0.0.1:3333' 2>&1)
@@ -81,4 +81,3 @@ Example input file (TAB separated)::
 ]]>
     </help>
 </tool>
-
